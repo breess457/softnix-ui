@@ -21,7 +21,7 @@ interface IsData {
 }
 
 const ProfilePage = () => {
-    const {data,loading,token} = useUser()
+    const {data,token} = useUser()
     const [getdata, setGetdata] = useState<[]>([]);
     const [page, setPage] = useState<number>(1);
     const [totalPages, setTotalPages] = useState<number>(1);

@@ -1,4 +1,4 @@
-import React,{ useEffect } from 'react'
+import { useEffect } from 'react'
 import './App.css'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 import HomePage from './pages/Home'

@@ -1,4 +1,4 @@
-import React, { FormEvent, useState, useContext } from "react"
+import React, { FormEvent, useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faXmark } from "@fortawesome/free-solid-svg-icons"
 import Swal from "sweetalert2"
@@ -97,40 +97,40 @@ const ModelUpdate:React.FC<PropModel> = ({setUpdateModel,fetchFeed, IsData})=>{
                         </div>
                         <form className="w-full" noValidate onSubmit={handleSumitEdit}>
                             <div className="gap-2 grid grid-cols-1 lg:grid-cols-2">
-                            <div className="w-full">
-                                <label htmlFor="" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Varity</label>
-                                <input 
-                                    type="text" 
-                                    placeholder="Seed Varity" 
-                                    name="Seed_Varity"
-                                    value={isForm.Seed_Varity}
-                                    onChange={(e) =>{
-                                            setIsForm({
-                                                ...isForm,
-                                                ['Seed_Varity']:e.target.value
-                                            })
+                                <div className="w-full">
+                                    <label htmlFor="" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Varity</label>
+                                    <input 
+                                        type="text" 
+                                        placeholder="Seed Varity" 
+                                        name="Seed_Varity"
+                                        value={isForm.Seed_Varity}
+                                        onChange={(e) =>{
+                                                setIsForm({
+                                                    ...isForm,
+                                                    ['Seed_Varity']:e.target.value
+                                                })
+                                            }
                                         }
-                                    }
-                                    className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                                />
-                            </div>
-                            <div className="w-full">
-                                <label htmlFor="" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Seed Stock2 Sale</label>
-                                <input 
-                                    type="text" 
-                                    placeholder="Seed Stock2 Sale" 
-                                    name="Seed_Stock2Sale"
-                                    value={isForm.Seed_Stock2Sale}
-                                    onChange={(e) =>{
-                                            setIsForm({
-                                                ...isForm,
-                                                ['Seed_Stock2Sale']:e.target.value
-                                            })
+                                        className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                    />
+                                </div>
+                                <div className="w-full">
+                                    <label htmlFor="" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Seed Stock2 Sale</label>
+                                    <input 
+                                        type="text" 
+                                        placeholder="Seed Stock2 Sale" 
+                                        name="Seed_Stock2Sale"
+                                        value={isForm.Seed_Stock2Sale}
+                                        onChange={(e) =>{
+                                                setIsForm({
+                                                    ...isForm,
+                                                    ['Seed_Stock2Sale']:e.target.value
+                                                })
+                                            }
                                         }
-                                    }
-                                    className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                                />
-                            </div>
+                                        className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                    />
+                                </div>
                             </div>
                             <div className="gap-2 grid grid-cols-1 md:grig-cols-2 lg:grid-cols-3">
                                 <div className="w-full">
@@ -153,14 +153,14 @@ const ModelUpdate:React.FC<PropModel> = ({setUpdateModel,fetchFeed, IsData})=>{
                                 <div className="w-full">
                                     <label htmlFor="" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Year week</label>
                                     <input 
-                                        type="number" 
+                                        type="text" 
                                         placeholder="Year week" 
                                         name="Seeds_YearWeek"
                                         value={isForm.Seeds_YearWeek}
                                         onChange={(e) =>{
                                                 setIsForm({
                                                     ...isForm,
-                                                    ['Seeds_YearWeek']:e.target.value
+                                                    ['Seeds_YearWeek']:Number(e.target.value)
                                                 })
                                             }
                                         }
@@ -196,7 +196,7 @@ const ModelUpdate:React.FC<PropModel> = ({setUpdateModel,fetchFeed, IsData})=>{
                                         onChange={(e) =>{
                                                 setIsForm({
                                                     ...isForm,
-                                                    ['Seed_Year']:e.target.value
+                                                    ['Seed_Year']:Number(e.target.value)
                                                 })
                                             }
                                         }

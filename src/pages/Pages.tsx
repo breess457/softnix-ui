@@ -14,7 +14,7 @@ interface Profile{
 }
 
 interface UserContextType{
-  data: Profile[]; 
+  data: Profile; 
   loading: boolean;
   token: string;
 }
@@ -57,6 +57,7 @@ const Pages = () => {
         }
     }
     useEffect(()=>{
+        settoken(JSON.parse(localStorage.getItem('token')!))
         if(token){
             fetchProfile(token)
         }
