@@ -111,7 +111,7 @@ const ProfilePage = () => {
         }, [page]);
     return (
         <div className="max-w-screen-xl flex flex-col items-center justify-between mx-auto p-4">
-            <div className="flex flex-row items-center justify-between mx-auto">
+            <div className="flex w-full flex-row items-center justify-between mx-auto">
                 <h1>รายการของฉัน : {data?.fullname}</h1> 
                 <button 
                     className="ml-auto px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300" 

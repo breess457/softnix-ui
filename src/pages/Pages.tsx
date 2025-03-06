@@ -78,7 +78,7 @@ const Pages = () => {
                                 <Link to={"/pages/"} className="block px-4 py-2 text-blue-600 underline hover:bg-gray-100">home</Link>
                             </li>
                             <li className="py-2 md:py-0">
-                                <Link to={"/pages/profile"} className="block px-4 py-2 text-blue-600 underline hover:bg-gray-100 ">{data?.fullname}</Link>
+                                <Link to={"/pages/profile"} className="block px-4 py-2 text-blue-600 underline hover:bg-gray-100 ">profile: {data?.fullname}</Link>
                             </li>
                             <li className="py-2 md:py-0">
                                 <button 
