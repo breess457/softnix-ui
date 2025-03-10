@@ -77,7 +77,7 @@ const FeedPage = () => {
                                 </div>
                             </div>
                             <div className="px-2">
-                                เพิ่มโดย {data?.User_id ? "ป" : "สาธารณะ"}
+                                เพิ่มโดย {data?.User_id ? data?.User_id?.fullname : "สาธารณะ"}
                             </div>
                         </div>
                     ))}
